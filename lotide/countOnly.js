@@ -26,7 +26,7 @@ const countOnly = function (allItems, itemsToCount) {
 };
 
 const countLetters = function (name) {
-  let result = [];
+  let result = {};
 
   for (let i = 0; i < name.length; i++) {
     let letter = name[i];
@@ -34,9 +34,9 @@ const countLetters = function (name) {
     let find = new RegExp(expression, 'g');
     const match = name.match(find);
     if (match) {
-      result.push({ [letter]: match.length });
+      result = { ...result, [letter]: match.length };
     } else {
-      result.push({ [letter]: 1 });
+      result = { ...result, [letter]: 1 };
     }
   }
   return result;
