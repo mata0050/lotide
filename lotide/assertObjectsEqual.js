@@ -1,4 +1,7 @@
-const assertEqual = function (actual, expected) {
+const assertObjectsEqual = function (actual, expected) {
+  const inspect = require('util').inspect;
+  console.log(`Example label: ${inspect(actual)}`);
+
   if (actual === expected) {
     console.log(`✅✅✅Assertion Passed: ${actual} === ${expected}`);
   } else {
@@ -40,7 +43,6 @@ const eqObjects = function (object1, object2) {
   return true;
 };
 
-
 // TEST
 const ab = { a: '1', b: '2' };
 const ba = { b: '2', a: '1' };
@@ -54,9 +56,9 @@ const cd2 = { c: '1', d: ['2', 3, 4] };
 
 const objArr1 = { a: [1, 2, 3], b: [1, 2, 3] };
 const objArr2 = { a: [1, 2, 3], b: [1, 2, 3] };
-console.log(assertEqual(eqObjects(objArr1, objArr2), true)); // => false
+console.log(assertObjectsEqual(eqObjects(objArr1, objArr2), true)); // => false
 
-assertEqual(eqObjects(ab, ba), true);
-assertEqual(eqObjects(ab, abc), false);
-assertEqual(eqObjects(cd, dc), true);
-assertEqual(eqObjects(cd, cd2), false);
+assertObjectsEqual(eqObjects(ab, ba), true);
+assertObjectsEqual(eqObjects(ab, abc), false);
+assertObjectsEqual(eqObjects(cd, dc), true);
+assertObjectsEqual(eqObjects(cd, cd2), false);
