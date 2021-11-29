@@ -1,5 +1,5 @@
 const assertEqual = require('../assertEqual');
-const letterPositions = require('../letterPositions');
+// const letterPositions = require('../letterPositions');
 
 // TEST CODE
-assertEqual(letterPositions('hello').e, [1]);
+// assertEqual(letterPositions('hello').e, [1]);
