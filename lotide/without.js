@@ -1,17 +1,4 @@
 // FUNCTION IMPLEMENTATION
-const assertEqual = function (actual, expected) {
-  let result = '';
-  if (actual.length !== 0) {
-    for (let i = 0; i < actual.length; i++) {
-      if (actual[i] === expected[i]) {
-        result = `✅✅✅Assertion Passed: ${actual} === ${expected}`;
-      } else {
-        result = `🛑🛑🛑Assertion Fail: ${actual} !== ${expected}`;
-      }
-    }
-    console.log(result);
-  }
-};
 
 const without = function (arr1, arr2) {
   let result = [];
@@ -28,10 +15,4 @@ const without = function (arr1, arr2) {
   console.log(result);
 };
 
-without([1, 2, 3], [1]);
-without(['1', '2', '3'], [1, 2, '3']);
-const words = ['hello', 'world', 'lighthouse'];
-without(words, ['lighthouse']);
-
-// TEST CODE
-assertEqual(words, ['hello', 'world', 'lighthouse']);
+module.exports = without;

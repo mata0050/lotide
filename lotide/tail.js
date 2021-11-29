@@ -7,16 +7,4 @@ const tail = function (arr) {
   }
 };
 
-const assertEqual = function (actual, expected) {
-  if (actual === expected) {
-    console.log(`✅✅✅Assertion Passed`);
-  } else {
-    console.log(`🛑🛑🛑Assertion Fail`);
-  }
-};
-
-// TEST CODE
-const result = tail(['Hello', 'Lighthouse', 'Labs']);
-assertEqual(result, ['Lighthouse', 'Labs']);
-
-tail([5, 3, 2]);
+module.exports = tail;
